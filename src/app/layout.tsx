@@ -1,5 +1,5 @@
 import '../styles/globals.css';
-// import { Radio_Canada } from 'next/font/google';
+import { Yellowtail, Roboto, Open_Sans } from 'next/font/google';
 
 export const metadata = {
   title: 'Organick',
@@ -18,14 +18,28 @@ export const metadata = {
   //   ],
   // },
 };
-// const radioCanada = Radio_Canada({
-//   subsets: ['latin'],
-//   display: 'swap',
-// });
+const yellowtail = Yellowtail({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-yellowtail',
+});
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['700', '900'],
+  variable: '--font-roboto',
+});
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-opensans',
+});
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang='en' className='something'>
+    <html
+      lang='en'
+      className={`${yellowtail.variable} ${roboto.variable} ${openSans.variable}`}
+    >
       <body>{children}</body>
     </html>
   );
