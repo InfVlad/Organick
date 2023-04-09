@@ -10,6 +10,7 @@
     "format": "prettier --write ./src"
   },
   "dependencies": {
+    "class-variance-authority": "^0.5.1",
     "clsx": "^1.2.1",
     "next": "^13.2.4",
     "react": "18.2.0",
