@@ -10,7 +10,7 @@ const config = {
     extend: {
       colors: {
         'primary-green': '#274C5B',
-        'secondary-green': '#577E65',
+        'secondary-green': '#7EB693',
         'third-green': '#EFF6F1',
         'primary-yellow': '#EFD372',
         'primary-grey': '#525C60',
