@@ -1,5 +1,7 @@
 import '../styles/globals.css';
 import { Yellowtail, Roboto, Open_Sans } from 'next/font/google';
+import Navbar from '~/components/Navbar';
+import Footer from '~/components/Footer';
 
 export const metadata = {
   title: 'Organick',
@@ -22,6 +24,7 @@ const yellowtail = Yellowtail({
   subsets: ['latin'],
   weight: ['400'],
   variable: '--font-yellowtail',
+  preload: true,
 });
 const roboto = Roboto({
   subsets: ['latin'],
@@ -40,7 +43,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang='en'
       className={`${yellowtail.variable} ${roboto.variable} ${openSans.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+        <Footer text='footer' />
+      </body>
     </html>
   );
 }
